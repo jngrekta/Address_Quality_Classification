@@ -74,10 +74,11 @@ gcloud artifacts repositories create flask-repo \
 
 gcloud artifacts repositories list --project=flask-address-project --location=us
 
+---
+docker tag address_quality_app us-docker.pkg.dev/flask-address-project/flask-repo/address_quality_app
+---
 
-# docker tag address_quality_app us-docker.pkg.dev/flask-address-project/flask-repo/address_quality_app
-
-# docker push us-docker.pkg.dev/flask-address-project/flask-repo/address_quality_app
+docker push us-docker.pkg.dev/flask-address-project/flask-repo/address_quality_app
 
 
 ./bin/gcloud projects get-iam-policy flask-address-project
